@@ -8,8 +8,7 @@ const connectDB = require('./config/db'); // Ensure this path is correct relativ
 const userRoutes = require('./routes/userRoutes');
 const referralRoutes = require('./routes/referralRoutes');
 const listingRoutes = require('./routes/listingRoutes');
-// const adminRoutes = require('./routes/adminRoutes'); // Assuming this is for admin actions on data
-const adminAuthRoutes = require('./routes/adminAuthRoutes'); // Assuming you created this for admin login
+
 const forumRoutes = require('./routes/forumRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
 const wishlistRoutes = require('./routes/wishlistRoutes');
@@ -46,7 +45,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/referrals', referralRoutes);
 app.use('/api/listings', listingRoutes);
 // app.use('/api/admin', adminRoutes); // For admin data operations
-app.use('/api/auth/admin', adminAuthRoutes); // For admin login (POST /api/auth/admin/signin)
+
 app.use('/api/forum', forumRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/stripe', stripeRoutes);
